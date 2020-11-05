@@ -38,6 +38,7 @@ mongoose
     app.use("/orders", validateToken, routes.orders);
     app.use("/faqs", validateToken, routes.faqs);
 
+    // auth
     app.use("/auth", routes.auth);
   })
   .catch((err) => console.log(err));
