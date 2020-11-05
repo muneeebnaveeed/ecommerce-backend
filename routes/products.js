@@ -17,14 +17,12 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/combination", async (req, res) => {
-  console.log(req.query);
-  res.status(200).send(req.query);
   try {
-    const params = _.pick(req.params, ["type", "collection", "tags"]);
+    const params = _.pick(req.query, ["type", "collection", "tags"]);
 
-    const type = params.type != "any" ? params.type : null;
-    const collection = params.collection != "any" ? params.collection : null;
-    const tags = params.tags != "any" ? params.tags.split(",") : null;
+    const type = params.type || null;
+    const collection = params.collection || null;
+    const tags = params.tags || null;
 
     const typeQuery = type ? { type } : {};
     const collectionQuery = collection ? { _collection: collection } : {};
