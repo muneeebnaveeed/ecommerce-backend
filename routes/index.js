@@ -5,6 +5,7 @@ const types = require("./types");
 const analytics = require("./analytics");
 const orders = require("./orders");
 const faqs = require("./faqs");
+const auth = require("./auth");
 
 module.exports = {
   tags,
@@ -14,4 +15,5 @@ module.exports = {
   analytics,
   orders,
   faqs,
+  auth,
 };
