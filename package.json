@@ -1,0 +1,22 @@
+{
+  "name": "ecom-backend",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "build": "NODE_ENV=production node app.js"
+  },
+  "keywords": [],
+  "author": "Muneeb Naveed",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "joi": "^17.3.0",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.11",
+    "nodemon": "^2.0.6"
+  }
+}
